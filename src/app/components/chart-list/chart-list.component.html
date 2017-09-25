@@ -1,10 +1,5 @@
 <div>
-		<div class="chart-container" *ngFor="let ratio of ratios">
-			<app-single-chart [ratio]="ratio"></app-single-chart>
-		</div>
+	<div class="chart-container" *ngFor="let ratio of ratios">
+		<app-single-chart [height]="calculateHeight(ratio)" [ratio]="ratio"></app-single-chart>
+	</div>
 </div>
-<!-- <div style="width: 100%">
-	<div style="float: left; width:33%"><app-single-chart [ratio]="ratios[0]"></app-single-chart></div>
-	<div style="float: left; width:33%"><app-single-chart [ratio]="ratios[1]"></app-single-chart></div>
-	<div style="float: left; width:33%"><app-single-chart [ratio]="ratios[2]"></app-single-chart></div>
-</div> -->

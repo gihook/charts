@@ -22,23 +22,23 @@ export class AppComponent {
 
 
 	let ratio1 = new Ratio();
-	ratio1.blueValue = 4421;
-	ratio1.greenValue = 3421;
-	ratio1.redValue = 3241;
-	ratio1.year = 2017;
+	ratio1.blueValue = 4235;
+	ratio1.greenValue = 3263;
+	ratio1.redValue = 3119;
+	ratio1.year = 2015;
 
 	let ratio2 = new Ratio();
-	ratio2.blueValue = 4421;
-	ratio2.greenValue = 3421;
+	ratio2.blueValue = 4354;
+	ratio2.greenValue = 3341;
 	ratio2.redValue = 3241;
-	ratio2.year = 2017;
+	ratio2.year = 2010;
 
 	let ratio3 = new Ratio();
-	ratio3.blueValue = 4421;
-	ratio3.greenValue = 3421;
-	ratio3.redValue = 3241;
-	ratio3.year = 2017;
+	ratio3.blueValue = 3505;
+	ratio3.greenValue = 745;
+	ratio3.redValue = 3290;
+	ratio3.year = 2013;
 
-	this.ratioList = [ratio1, ratio2, ratio3];
+	this.ratioList = [ratio1, ratio2, ratio3, ratio1, ratio2, ratio3];
   }
 }
