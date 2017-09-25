@@ -9,11 +9,14 @@ import { Ratio } from './models/ratio.model';
 export class AppComponent {
   title = 'app';
   ratio: Ratio;
+  height: number;
 
   constructor() {
 	this.ratio = new Ratio();
 	this.ratio.blueValue = 50;
 	this.ratio.greenValue = 10;
 	this.ratio.redValue = 40;
+	this.ratio.year = 2017;
+	this.height = 200;
   }
 }

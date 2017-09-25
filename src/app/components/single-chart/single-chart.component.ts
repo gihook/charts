@@ -7,14 +7,17 @@ import { Ratio } from '../../models/ratio.model';
 	styleUrls: ['./single-chart.component.css']
 })
 export class SingleChartComponent implements OnInit {
-	totalHeight: number;
+	@Input() height: number;
 	@Input() ratio: Ratio;
-	bluePercentage: number;
-	greenPercentage: number;
 	redPercentage: number;
+	greenPercentage: number;
+	bluePercentage: number;
+
+	redTextPosition: number;
+	greenTextPosition: number;
+	blueTextPosition: number;
 
 	constructor() {
-		this.totalHeight = 200;
 	}
 
 	ngOnInit() {
@@ -28,6 +31,11 @@ export class SingleChartComponent implements OnInit {
 		console.log(this.greenPercentage);
 		this.bluePercentage = this.ratio.blueValue / total * 100;
 		console.log(this.bluePercentage);
+
+		this.redTextPosition = this.redPercentage / 2;
+		this.greenTextPosition = this.redPercentage + this.ratio.greenValue / total * 50;
+		this.blueTextPosition = this.greenPercentage + this.bluePercentage / 2;
+		console.log(this.blueTextPosition);
 	}
 
 }
