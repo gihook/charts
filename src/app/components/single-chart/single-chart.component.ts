@@ -9,6 +9,10 @@ import { Ratio } from '../../models/ratio.model';
 export class SingleChartComponent implements OnInit {
 	@Input() height: number;
 	@Input() ratio: Ratio;
+	textFont: number = 10;
+	textColor: string = 'white';
+
+
 	redPercentage: number;
 	greenPercentage: number;
 	bluePercentage: number;
@@ -21,21 +25,20 @@ export class SingleChartComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		console.log(this.ratio);
-		const total = this.ratio.blueValue + this.ratio.greenValue + this.ratio.redValue;
-		console.log(total);
+		this.setProperties();
+	}
+
+	setProperties() {
+		let total = this.ratio.blueValue + this.ratio.greenValue + this.ratio.redValue;
+
 		this.redPercentage = this.ratio.redValue / total * 100;
-		console.log(this.redPercentage);
-		this.greenPercentage = this.ratio.greenValue / total * 100;
-		this.greenPercentage = this.greenPercentage + this.redPercentage;
-		console.log(this.greenPercentage);
+		let netGreenPercentage = this.ratio.greenValue / total * 100;
+		this.greenPercentage = netGreenPercentage + this.redPercentage;
 		this.bluePercentage = this.ratio.blueValue / total * 100;
-		console.log(this.bluePercentage);
 
 		this.redTextPosition = this.redPercentage / 2;
-		this.greenTextPosition = this.redPercentage + this.ratio.greenValue / total * 50;
+		this.greenTextPosition = this.redPercentage + netGreenPercentage / 2;
 		this.blueTextPosition = this.greenPercentage + this.bluePercentage / 2;
-		console.log(this.blueTextPosition);
 	}
 
 }

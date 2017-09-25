@@ -13,9 +13,9 @@ export class AppComponent {
 
   constructor() {
 	this.ratio = new Ratio();
-	this.ratio.blueValue = 50;
-	this.ratio.greenValue = 10;
-	this.ratio.redValue = 40;
+	this.ratio.blueValue = 4421;
+	this.ratio.greenValue = 3421;
+	this.ratio.redValue = 3241;
 	this.ratio.year = 2017;
 	this.height = 200;
   }
