@@ -1,0 +1,5 @@
+::ng-deep .chart-container {
+	float: left;
+	padding: 10px;
+	width: 20%;
+}

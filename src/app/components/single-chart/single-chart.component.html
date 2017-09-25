@@ -1,5 +1,5 @@
-<div>
-	<svg width="100" [attr.height]="height" style="background-color: blue;">
+<div style="width: 100px">
+	<svg width="100%" [attr.height]="height" style="background-color: blue;">
 		<g>
 			<rect width="100%" *ngIf="greenPercentage" [attr.height]="greenPercentage + '%'" x="0" y="0" fill="green" />
 			<rect width="100%" *ngIf="redPercentage" [attr.height]="redPercentage + '%'" x="0" y="0" fill="red" />
@@ -8,5 +8,7 @@
 			<text x="50%" [attr.y]="blueTextPosition + '%'" text-anchor="middle" dominant-baseline="middle" [attr.font-size]="textFont" [attr.fill]="textColor">{{ ratio.blueValue | currency : 'EUR': true }}</text>
 		</g>
 	</svg>
-	<input type="number" [(ngModel)]="height" />
+	<svg width="100%" height="50">
+		<text x="50%" y="50%" text-anchor="middle" font-size="20" fill="black">{{ ratio.year }}</text>
+	</svg>
 </div>
