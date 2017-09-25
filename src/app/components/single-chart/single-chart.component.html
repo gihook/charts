@@ -1,0 +1,10 @@
+<div>
+	<svg width="100" [attr.height]="totalHeight" style="border: 1px solid black; background-color: blue;">
+		<g>
+			<rect width="100%" *ngIf="greenPercentage" [attr.height]="greenPercentage + '%'" x="0" y="0" fill="green" />
+			<rect width="100%" *ngIf="redPercentage" [attr.height]="redPercentage + '%'" x="0" y="0" fill="red" />
+			<text x="50%" y="50%" text-anchor="middle" alignment-baseline="central" font-size="12" fill="white">Hello</text>
+		</g>
+	</svg>
+	<input type="number" [(ngModel)]="blueHeight" />
+</div>
