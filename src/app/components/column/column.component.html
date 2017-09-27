@@ -1,13 +1,16 @@
 <div class="component-container">
 	<div class="empty-space" [style.height]="emptyDivPercentage + '%'"></div>
 	<div class="column-container" [style.height]="containerDivePercentage + '%'">
-		<div class="first-row">
+		<!-- <div class="column-row">
 			<p class="blocktext">Some text for test.</p>
 		</div>
-		<div class="second-row">
+		<div class="column-row">
 			<p class="blocktext">Some text for test.</p>
 		</div>
-		<div class="third-row">
+		<div class="column-row">
+			<p class="blocktext">Some text for test.</p>
+		</div> -->
+		<div *ngFor="let column of columnItems" [style.height]="getColumnHeightPercentage(column.value) + '%'" class="column-row">
 			<p class="blocktext">Some text for test.</p>
 		</div>
 	</div>

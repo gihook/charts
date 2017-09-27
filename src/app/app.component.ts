@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Ratio } from './models/ratio.model';
+import { ColumnItem } from './models/column-item.model';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,7 @@ export class AppComponent {
   ratio: Ratio;
   ratioList: Ratio[];
   height: number;
+  columnItems: ColumnItem[];
 
   constructor() {
 	this.ratio = new Ratio();
@@ -40,5 +42,27 @@ export class AppComponent {
 	ratio3.year = 2013;
 
 	this.ratioList = [ratio1, ratio2, ratio3, ratio1, ratio2, ratio3];
+
+	this.columnItems = [];
+
+	let columnItem1 = new ColumnItem();
+	columnItem1.label = 'Item 1';
+	columnItem1.value = 256;
+	this.columnItems.push(columnItem1);
+
+	let columnItem2 = new ColumnItem();
+	columnItem2.label = 'Item 2';
+	columnItem2.value = 170;
+	this.columnItems.push(columnItem2);
+
+	let columnItem3 = new ColumnItem();
+	columnItem3.label = 'Item 3';
+	columnItem3.value = 500;
+	this.columnItems.push(columnItem3);
+
+	let columnItem4 = new ColumnItem();
+	columnItem4.label = 'Item 3';
+	columnItem4.value = 234;
+	this.columnItems.push(columnItem4);
   }
 }

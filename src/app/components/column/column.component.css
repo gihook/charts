@@ -20,23 +20,9 @@ p.blocktext {
 	color: white;
 }
 
-.first-row {
-	height: 33%;
+.column-row {
 	background-color: red;
 	border: 5px solid white;
-	border-radius: 10%;
-}
+	border-radius: 15px;
 
-.second-row {
-	height: 33%;
-	background-color: red;
-	border: 5px solid white;
-	border-radius: 10%;
-}
-
-.third-row {
-	height: 34%;
-	background-color: red;
-	border: 5px solid white;
-	border-radius: 10%;
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ColumnItem } from '../../models/column-item.model';
 
 @Component({
 	selector: 'app-column',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./column.component.css']
 })
 export class ColumnComponent implements OnInit {
+	@Input() columnItems: ColumnItem[];
+
 	inflation: number = 0;
 	emptyDivPercentage: number = 20;
 	containerDivePercentage: number = 80;
@@ -29,6 +32,22 @@ export class ColumnComponent implements OnInit {
 		if (value < 0) return 0;
 
 		return value as number;
+	}
+
+	getColumnHeightPercentage(columnValue: number): number {
+		console.log('getColumnHeightPercentage');
+		let values = this.columnItems.map(x => x.value);
+		let totalValue = this.getSum(values);
+		let columnHeightPercentage = columnValue / totalValue * 100;
+
+		return columnHeightPercentage;
+	}
+
+	getSum(array: number[]): number {
+		let sum = 0;
+		array.forEach(x => sum += x);
+
+		return sum;
 	}
 
 }
