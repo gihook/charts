@@ -1,8 +1,10 @@
 <div class="component-container">
 	<div class="empty-space" [style.height]="emptyDivPercentage + '%'"></div>
 	<div class="column-container" [style.height]="containerDivePercentage + '%'">
-		<div *ngFor="let column of columnItems" [style.height]="getColumnHeightPercentage(column.value) + '%'" class="column-row">
-			<p class="blocktext">Some text for test.</p>
-		</div>
+		<ng-container *ngFor="let column of columnItems">
+			<div *ngIf="column.value > minimalValue" [style.height]="getColumnHeightPercentage(column.value) + '%'" class="column-row">
+				<p class="blocktext">{{ column.label }}</p>
+			</div>
+		</ng-container>
 	</div>
 </div>

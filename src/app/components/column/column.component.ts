@@ -12,6 +12,7 @@ export class ColumnComponent {
 
 	emptyDivPercentage: number = 20;
 	containerDivePercentage: number = 80;
+	minimalValue = 50;
 
 	constructor() { }
 
