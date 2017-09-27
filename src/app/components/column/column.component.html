@@ -1,7 +1,16 @@
-<div class="column-container">
-	<div class="first-row">
-		<p class="blocktext">Some text for test.</p>
+<div class="component-container">
+	<div class="empty-space" [style.height]="emptyDivPercentage + '%'"></div>
+	<div class="column-container" [style.height]="containerDivePercentage + '%'">
+		<div class="first-row">
+			<p class="blocktext">Some text for test.</p>
+		</div>
+		<div class="second-row">
+			<p class="blocktext">Some text for test.</p>
+		</div>
+		<div class="third-row">
+			<p class="blocktext">Some text for test.</p>
+		</div>
 	</div>
-	<div class="second-row"></div>
-	<div class="third-row"></div>
 </div>
+
+<input type="number" [ngModel]="inflation" (ngModelChange)="onInflationChange($event)">

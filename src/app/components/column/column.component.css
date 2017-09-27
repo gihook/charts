@@ -1,7 +1,15 @@
-.column-container {
+.component-container {
 	height: 600px;
 	width: 300px;
-	background-color: gray;
+	border: 1px solid black;
+}
+
+.empty-space {
+	height: 20%;
+}
+
+.column-container {
+	height: 80%;
 }
 
 p.blocktext {
@@ -9,25 +17,26 @@ p.blocktext {
 	top: 50%;
 	transform: translateY(-50%);
 	text-align: center;
+	color: white;
 }
 
 .first-row {
 	height: 33%;
-	background-color: lightgreen;
-	border: 5px solid gray;
+	background-color: red;
+	border: 5px solid white;
 	border-radius: 10%;
 }
 
 .second-row {
 	height: 33%;
-	background-color: lightslategrey;
-	border: 5px solid gray;
+	background-color: red;
+	border: 5px solid white;
 	border-radius: 10%;
 }
 
 .third-row {
 	height: 34%;
-	background-color: lightskyblue;
-	border: 5px solid gray;
+	background-color: red;
+	border: 5px solid white;
 	border-radius: 10%;
 }
