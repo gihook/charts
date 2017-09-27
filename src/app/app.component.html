@@ -1,5 +1,11 @@
 <!-- <app-chart-list [ratios]="ratioList"></app-chart-list> -->
-<app-column [inflation]="inflation" [columnItems]="columnItems"></app-column>
+<div style="width: 50%; float: left;">
+	<app-column [inflation]="inflation" [columnItems]="columnItems"></app-column>
+</div>
+<div style="width: 50%; float: left;">
+	<app-column [columnItems]="columnItems"></app-column>
+</div>
+
 inflation
 <input type="number" [(ngModel)]="inflation" >
 column item 1
