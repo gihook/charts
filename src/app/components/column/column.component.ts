@@ -6,16 +6,18 @@ import { ColumnItem } from '../../models/column-item.model';
 	templateUrl: './column.component.html',
 	styleUrls: ['./column.component.css']
 })
-export class ColumnComponent implements OnInit {
+export class ColumnComponent {
 	@Input() columnItems: ColumnItem[];
+	@Input() inflation: number = 0;
 
-	inflation: number = 0;
 	emptyDivPercentage: number = 20;
 	containerDivePercentage: number = 80;
 
 	constructor() { }
 
-	ngOnInit() {
+	// tslint:disable-next-line:use-life-cycle-interface
+	ngOnChanges() {
+		this.onInflationChange(this.inflation);
 	}
 
 	onInflationChange(value) {

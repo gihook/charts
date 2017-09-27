@@ -13,6 +13,11 @@ export class AppComponent {
   ratioList: Ratio[];
   height: number;
   columnItems: ColumnItem[];
+  inflation: number = 0;
+  columnItem1: ColumnItem;
+  columnItem2: ColumnItem;
+  columnItem3: ColumnItem;
+  columnItem4: ColumnItem;
 
   constructor() {
 	this.ratio = new Ratio();
@@ -45,24 +50,24 @@ export class AppComponent {
 
 	this.columnItems = [];
 
-	let columnItem1 = new ColumnItem();
-	columnItem1.label = 'Item 1';
-	columnItem1.value = 256;
-	this.columnItems.push(columnItem1);
+	this.columnItem1 = new ColumnItem();
+	this.columnItem1.label = 'Item 1';
+	this.columnItem1.value = 256;
+	this.columnItems.push(this.columnItem1);
 
-	let columnItem2 = new ColumnItem();
-	columnItem2.label = 'Item 2';
-	columnItem2.value = 170;
-	this.columnItems.push(columnItem2);
+	this.columnItem2 = new ColumnItem();
+	this.columnItem2.label = 'Item 2';
+	this.columnItem2.value = 170;
+	this.columnItems.push(this.columnItem2);
 
-	let columnItem3 = new ColumnItem();
-	columnItem3.label = 'Item 3';
-	columnItem3.value = 500;
-	this.columnItems.push(columnItem3);
+	this.columnItem3 = new ColumnItem();
+	this.columnItem3.label = 'Item 3';
+	this.columnItem3.value = 500;
+	this.columnItems.push(this.columnItem3);
 
-	let columnItem4 = new ColumnItem();
-	columnItem4.label = 'Item 3';
-	columnItem4.value = 234;
-	this.columnItems.push(columnItem4);
+	this.columnItem4 = new ColumnItem();
+	this.columnItem4.label = 'Item 3';
+	this.columnItem4.value = 234;
+	this.columnItems.push(this.columnItem4);
   }
 }
