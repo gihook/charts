@@ -5,12 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { SingleChartComponent } from './components/single-chart/single-chart.component';
 import { ChartListComponent } from './components/chart-list/chart-list.component';
+import { ColumnComponent } from './components/column/column.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SingleChartComponent,
-    ChartListComponent
+    ChartListComponent,
+    ColumnComponent
   ],
   imports: [
     BrowserModule, FormsModule

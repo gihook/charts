@@ -1,0 +1,33 @@
+.column-container {
+	height: 600px;
+	width: 300px;
+	background-color: gray;
+}
+
+p.blocktext {
+    position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+}
+
+.first-row {
+	height: 33%;
+	background-color: lightgreen;
+	border: 5px solid gray;
+	border-radius: 10%;
+}
+
+.second-row {
+	height: 33%;
+	background-color: lightslategrey;
+	border: 5px solid gray;
+	border-radius: 10%;
+}
+
+.third-row {
+	height: 34%;
+	background-color: lightskyblue;
+	border: 5px solid gray;
+	border-radius: 10%;
+}
