@@ -14,9 +14,9 @@ export class ColumnComponent {
 	containerDivePercentage: number = 80;
 	minimalValue = 50;
 
-	totalRedPercentage: number = 40;
-	totalGreenPercentage: number = 20;
-	totalBluePercentage: number = 40;
+	totalRedPercentage: number = 34;
+	totalGreenPercentage: number = 27;
+	totalBluePercentage: number = 37;
 
 	blueColor: string = "blue";
 	greenColor: string = "green";
@@ -67,7 +67,7 @@ export class ColumnComponent {
 		console.log("sum: " + sumOfPreviousPercentages);
 
 		let redPercentage = this.getRedGradientPercentage(sumOfPreviousPercentages, i);
-		let greenPercentage = 100 - redPercentage;
+		let greenPercentage = this.getGreenGradientPercentage(sumOfPreviousPercentages, redPercentage, i);
 
 		let redParams = `${this.redColor} 0%, ${this.redColor} ${redPercentage}%`;
 		let greenParams = `${this.greenColor} ${redPercentage}%, ${this.greenColor} ${greenPercentage}%`;
@@ -92,6 +92,18 @@ export class ColumnComponent {
 			/ this.getColumnHeightPercentage(this.columnItems[index].value) * 100;
 
 		if (result < 0) return 0;
+
+		return result;
+	}
+
+	getGreenGradientPercentage(sumOfPrevious: number, redPercentage: number, index: number): number {
+		// tslint:disable-next-line:max-line-length
+		if (sumOfPrevious - this.getColumnHeightPercentage(this.columnItems[index].value) > this.totalRedPercentage + this.totalGreenPercentage) return 0;
+
+		let result = this.totalGreenPercentage / this.getColumnHeightPercentage(this.columnItems[index].value) * 100 + redPercentage;
+
+		if (result < 0) return 0;
+		if (result > 100) return 100;
 
 		return result;
 	}
