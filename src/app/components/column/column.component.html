@@ -1,9 +1,9 @@
 <div class="component-container">
 	<div class="empty-space" [style.height]="emptyDivPercentage + '%'"></div>
 	<div class="column-container" [style.height]="containerDivePercentage + '%'">
-		<ng-container *ngFor="let column of columnItems">
-			<div *ngIf="column.value > minimalValue" [style.height]="getColumnHeightPercentage(column.value) + '%'" class="column-row">
-				<p class="blocktext">{{ column.label }}</p>
+		<ng-container *ngFor="let column of columnItems; let i = index">
+			<div *ngIf="column.value > minimalValue" [style.height]="getColumnHeightPercentage(column.value) + '%'" [style.background]="getLinearGradient(column, i)" class="column-row">
+				<span class="blocktext">{{ column.label }} {{ getColumnHeightPercentage(column.value) + "%" }}</span>
 			</div>
 		</ng-container>
 	</div>

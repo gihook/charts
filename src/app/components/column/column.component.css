@@ -12,16 +12,13 @@
 	height: 80%;
 }
 
-p.blocktext {
-    position: relative;
-	top: 50%;
-	transform: translateY(-50%);
-	text-align: center;
-	color: white;
-}
 
 .column-row {
-	background-color: red;
-	border: 5px solid white;
 	border-radius: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	-webkit-box-shadow:inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow:inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5);
+	box-shadow:inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5);
 }
