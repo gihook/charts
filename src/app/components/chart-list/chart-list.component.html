@@ -1,5 +1,5 @@
 <div>
-	<div class="chart-container" *ngFor="let ratio of ratios">
-		<app-single-chart [height]="calculateHeight(ratio)" [ratio]="ratio"></app-single-chart>
+	<div class="chart-container" *ngFor="let ratio of ratios" [style.width]="chartContainerWidth + '%'" >
+		<app-single-chart [height]="calculateHeightPercentage(ratio)" [ratio]="ratio"></app-single-chart>
 	</div>
 </div>

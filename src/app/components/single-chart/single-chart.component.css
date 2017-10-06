@@ -1,5 +1,6 @@
 ::ng-deep .single-chart-container {
-	position: absolute;
+	/* position: absolute;
 	bottom: 0;
-	width: 100px;
+	width: 100px; */
+	background-color: blue;
 }

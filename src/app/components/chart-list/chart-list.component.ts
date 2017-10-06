@@ -8,10 +8,13 @@ import { Ratio } from '../../models/ratio.model';
 })
 export class ChartListComponent implements OnInit {
 	@Input() ratios: Ratio[];
+	chartContainerWidth: number;
 
-	constructor() { }
+	constructor() {
+	}
 
 	ngOnInit() {
+		this.chartContainerWidth = 100 / this.ratios.length;
 	}
 
 	getMax() {
@@ -27,10 +30,11 @@ export class ChartListComponent implements OnInit {
 		return max;
 	}
 
-	calculateHeight(ratio: Ratio): number {
+	calculateHeightPercentage(ratio: Ratio): number {
 		let max = this.getMax();
 
-		let height = (ratio.blueValue + ratio.greenValue + ratio.redValue) / max * 200;
+		const hundredPercent = 100;
+		let height = (ratio.blueValue + ratio.greenValue + ratio.redValue) / max * hundredPercent;
 
 		return height;
 	}
