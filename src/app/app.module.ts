@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { SingleChartComponent } from './components/single-chart/single-chart.component';
 import { ChartListComponent } from './components/chart-list/chart-list.component';
 import { ColumnComponent } from './components/column/column.component';
+import { SvgColumnComponent } from './components/svg-column/svg-column.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SingleChartComponent,
     ChartListComponent,
-    ColumnComponent
+    ColumnComponent,
+    SvgColumnComponent
   ],
   imports: [
     BrowserModule, FormsModule
